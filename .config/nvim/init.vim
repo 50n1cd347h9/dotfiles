@@ -51,3 +51,17 @@ augroup vimrc
 	"autocmd bufread,bufnewfile * nested call OpenFern()
 augroup END
 
+
+" treesitter
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+	ensure_installed = {"c", "python", "typescript"}, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+	auto_install = true,
+	highlight = {
+		enable = true,              -- false will disable the whole extension
+		disable = {},  -- list of language that will be disabled
+	},
+}
+EOF
+
+
