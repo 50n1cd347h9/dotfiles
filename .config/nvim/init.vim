@@ -1,3 +1,5 @@
+source $HOME/.config/nvim/fudebako.vim/manager.vim
+
 inoremap [ []<LEFT>
 inoremap ( ()<LEFT>
 inoremap { {}<LEFT>
@@ -22,11 +24,11 @@ nnoremap sh <C-w>s<CR><C-w>w<CR>:term<CR>:set norelativenumber<CR>i
 set relativenumber
 set clipboard+=unnamedplus
 syntax enable
+colorscheme hybrid
 
 " set ignorecase
 set nowritebackup
 set nobackup
-"set default shell
 set shell=bash
 set noswapfile
 set autoindent 
@@ -34,7 +36,6 @@ set tabstop=4
 set shiftwidth=4
 
 
-source $HOME/.config/nvim/fudebako.vim/manager.vim
 
 function! OpenFern()
 	execute "Fern . -reveal=% -drawer -toggle -width=40\<CR>\<Esc>"
@@ -55,8 +56,8 @@ augroup END
 " treesitter
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
-	ensure_installed = {"c", "python", "typescript"}, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-	auto_install = true,
+	ensure_installed = {"c", "python", "typescript", "vim", "yaml"}, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+	sync_install = true,
 	highlight = {
 		enable = true,              -- false will disable the whole extension
 		disable = {},  -- list of language that will be disabled

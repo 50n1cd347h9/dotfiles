@@ -1,3 +1,9 @@
+" file tree
 https://github.com/lambdalisue/fern.vim.git
-https://github.com/tomasiser/vim-code-dark.git
+
+" syntax hilight
 https://github.com/nvim-treesitter/nvim-treesitter.git
+
+" colorscheme
+https://github.com/w0ng/vim-hybrid.git
+https://github.com/tomasiser/vim-code-dark.git
