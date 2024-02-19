@@ -1,0 +1,25 @@
+# This is whitelist
+
+# Ignore all files but directory
+*
+!*/
+
+# include
+!.gitignore
+!.gitmodules
+!README.md
+# !env_setup/**
+!VM/**
+!docker/**
+!.bashrc
+!.gdbinit
+!.vim/**
+!.tmux.conf
+!.config/alacritty/**
+!.config/nvim/**
+!.config/zed/**
+
+# ignore
+/.vim/plugins
+/.config/nvim/plugins
+/.config/nvim/fudebako.vim

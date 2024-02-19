@@ -1,0 +1,6 @@
+[submodule ".config/nvim/fudebako.vim"]
+	path = .config/nvim/fudebako.vim
+	url = https://github.com/50n1cd347h9/fudebako.vim.git
+[submodule "env_setup"]
+	path = env_setup
+	url = https://github.com/50n1cd347h9/env_setup.git
