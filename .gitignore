@@ -8,7 +8,6 @@
 !.gitignore
 !.gitmodules
 !README.md
-# !env_setup/**
 !VM/**
 !docker/**
 !.bashrc
@@ -22,4 +21,6 @@
 # ignore
 /.vim/plugins
 /.config/nvim/plugins
+
+# do not include submodule directory!!!
 /.config/nvim/fudebako.vim
