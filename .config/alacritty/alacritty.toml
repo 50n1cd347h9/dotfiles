@@ -1,0 +1,78 @@
+[colors.bright]
+black = "0x100F0F"
+blue = "0x4385BE"
+cyan = "0x3AA99F"
+green = "0x879A39"
+magenta = "0xCE5D97"
+red = "0xD14D41"
+white = "0xFFFCF0"
+yellow = "0xD0A215"
+
+[colors.cursor]
+cursor = "0xFFFCF0"
+text = "0xFFFCF0"
+
+[colors.dim]
+black = "0x100F0F"
+blue = "0x205EA6"
+cyan = "0x24837B"
+green = "0x66800B"
+magenta = "0xA02F6F"
+red = "0xAF3029"
+white = "0xFFFCF0"
+yellow = "0xAD8301"
+
+[colors.normal]
+black = "0x100F0F"
+blue = "0x205EA6"
+cyan = "0x24837B"
+green = "0x66800B"
+magenta = "0xA02F6F"
+red = "0xAF3029"
+white = "0xFFFCF0"
+yellow = "0xAD8301"
+
+[colors.primary]
+background = "0x1a1a1a"
+# bright_background = "0x1C1B1A"
+# bright_foreground = "0xFFFCF0"
+# dim_background = "0x1C1B1A"
+# dim_foreground = "0xFFFCF0"
+foreground = "0xFFFCF0"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 12
+
+[font.bold]
+family = "Intel One Mono"
+# style = "Bold"
+
+[font.normal]
+family = "Intel One Mono"
+# styLe = "Regular"
+
+[font.offset]
+x = 0
+y = 1
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[shell]
+program = "/bin/bash"
+
+[window]
+decorations = "full"
+opacity = 0.93
+
+[window.dimensions]
+columns = 400
+lines = 120
+
+[window.padding]
+x = 8
+y = 4
