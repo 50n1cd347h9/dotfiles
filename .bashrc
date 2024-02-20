@@ -232,8 +232,8 @@ fi
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
 export PATH=/opt/riscv/bin:$PATH
-# export BUN_INSTALL="$HOME/.bun"
-# export PATH=$BUN_INSTALL/bin:$PATH
+export PATH=/opt/binaryninja:$PATH
+alias binja="binaryninja &"
 
 if command -v tmux &>/dev/null; then
 	count=`ps aux | grep tmux | grep -v grep | wc -l`
