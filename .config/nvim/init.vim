@@ -56,7 +56,7 @@ augroup END
 " treesitter
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
-	ensure_installed = {"c", "python", "typescript", "vim", "yaml"}, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+	ensure_installed = {"c", "python", "typescript", "vim", "yaml", "rust"}, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
 	sync_install = true,
 	highlight = {
 		enable = true,              -- false will disable the whole extension
