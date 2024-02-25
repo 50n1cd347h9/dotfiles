@@ -17,6 +17,7 @@
 !.config/alacritty/**
 !.config/nvim/**
 !.config/zed/**
+!.config/i3/**
 
 # ignore
 /.vim/plugins

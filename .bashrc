@@ -8,7 +8,7 @@ export HISTSIZE=2000
 export HISTFILESIZE=2000
 export PATH=$HOME/bin:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
-
+export PATH="$PATH:/opt/nvim-linux64/bin"
 colors() {
 	local fgc bgc vals seq0
 
