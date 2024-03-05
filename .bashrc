@@ -73,10 +73,7 @@ if ${use_color} ; then
 	fi
 
 	if [[ ${EUID} == 0 ]] ; then
-		# PS1="\e[01;31m\][\h\e[01;36m\] \W\e[01;31m\]]\$\e[00m\] "
-
-		PS1="\[$(tput bold)\]\033[01;31m\][\h \033[01;36m\]\W\033[01;31m\]]\$ \[$(tput sgr0)\]"
-
+		PS1="\[$(tput bold)\]\[\033[01;31m\][\h\[$(tput sgr0)\] \[\033[01;36m\]\W\[$(tput sgr0)\]\[\033[01;31m\]]\$ \[$(tput sgr0)\]"
 	elif [[ $(ps aux | grep "sshd" | grep -v "root" | grep -v "grep") ]]; then
 	 	PS1="\[$(tput bold)\]\[\033[38;5;2m\]\u\[$(tput sgr0)\] \[$(tput bold)\]\[\033[38;5;11m\]\W\[$(tput sgr0)\] \[$(tput bold)\]\[\033[38;5;13m\]ssh $ \[$(tput sgr0)\]"
 	else
