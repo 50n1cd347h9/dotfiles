@@ -193,3 +193,4 @@ bar {
 
 
 exec_always picom -f
+

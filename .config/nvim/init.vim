@@ -24,7 +24,7 @@ nnoremap sh <C-w>s<CR><C-w>w<CR>:term<CR>:set norelativenumber<CR>i
 set relativenumber
 set clipboard+=unnamedplus
 syntax enable
-colorscheme hybrid
+" colorscheme hybrid
 
 " set ignorecase
 set nowritebackup
