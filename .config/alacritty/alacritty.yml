@@ -22,7 +22,7 @@ font:
   bold:
       family: 'Intel One Mono'
       style: Bold
-  size: 12
+  size: 14
   offset:
     y: 1
     x: 0
