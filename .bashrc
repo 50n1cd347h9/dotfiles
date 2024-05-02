@@ -9,6 +9,7 @@ export HISTFILESIZE=2000
 export PATH=$HOME/bin:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
 export PATH="$PATH:/opt/nvim-linux64/bin"
+export PATH=$HOME/.pyenv/bin:$PATH
 colors() {
 	local fgc bgc vals seq0
 
@@ -253,3 +254,6 @@ export LC_CTYPE=C.UTF-8
 if [ -f ~/.git-completion.sh ]; then
     source ~/.git-completion.sh
 fi
+
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
