@@ -1,50 +1,37 @@
-[colors.bright]
-black = "0x100F0F"
-blue = "0x4385BE"
-cyan = "0x3AA99F"
-green = "0x879A39"
-magenta = "0xCE5D97"
-red = "0xD14D41"
-white = "0xFFFCF0"
-yellow = "0xD0A215"
+# Colors (Ayu Dark)
 
-[colors.cursor]
-cursor = "0xFFFCF0"
-text = "0xFFFCF0"
-
-[colors.dim]
-black = "0x100F0F"
-blue = "0x205EA6"
-cyan = "0x24837B"
-green = "0x66800B"
-magenta = "0xA02F6F"
-red = "0xAF3029"
-white = "0xFFFCF0"
-yellow = "0xAD8301"
-
-[colors.normal]
-black = "0x100F0F"
-blue = "0x205EA6"
-cyan = "0x24837B"
-green = "0x66800B"
-magenta = "0xA02F6F"
-red = "0xAF3029"
-white = "0xFFFCF0"
-yellow = "0xAD8301"
-
+# Default colors
 [colors.primary]
-background = "0x1a1a1a"
-# bright_background = "0x1C1B1A"
-# bright_foreground = "0xFFFCF0"
-# dim_background = "0x1C1B1A"
-# dim_foreground = "0xFFFCF0"
-foreground = "0xFFFCF0"
+background = '#0A0E14'
+foreground = '#B3B1AD'
+
+# Normal colors
+[colors.normal]
+black   = '#01060E'
+red     = '#EA6C73'
+green   = '#91B362'
+yellow  = '#F9AF4F'
+blue    = '#53BDFA'
+magenta = '#FAE994'
+cyan    = '#90E1C6'
+white   = '#C7C7C7'
+
+# Bright colors
+[colors.bright]
+black   = '#686868'
+red     = '#F07178'
+green   = '#C2D94C'
+yellow  = '#FFB454'
+blue    = '#59C2FF'
+magenta = '#FFEE99'
+cyan    = '#95E6CB'
+white   = '#FFFFFF'
 
 [env]
 TERM = "xterm-256color"
 
 [font]
-size = 14
+size = 12
 
 [font.bold]
 family = "Intel One Mono"
@@ -67,7 +54,7 @@ program = "/bin/bash"
 
 [window]
 decorations = "full"
-opacity = 0.80
+opacity = 0.90
 
 [window.dimensions]
 columns = 400

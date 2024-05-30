@@ -10,6 +10,14 @@ export PATH=$HOME/bin:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
 export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH=$HOME/.pyenv/bin:$PATH
+export PATH="$HOME/zig-linux-x86_64-0.13.0-dev.46+3648d7df1:$PATH"
+export PATH="$HOME/local/llvm17-release/bin:$PATH"
+export PATH="/opt:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 colors() {
 	local fgc bgc vals seq0
 
@@ -257,3 +265,4 @@ fi
 
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
