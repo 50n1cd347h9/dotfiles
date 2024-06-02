@@ -184,6 +184,20 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+
+set $workspace1 "1: Web and Code"
+set $workspace2 "2: BinaryNinja"
+assign [class="Brave-browser"] $workspace1
+assign [class="Alacritty"] $workspace1
+assign [class="Obsidian"] $workspace1
+assign [class="Binary Ninja"] $workspace2
+exec --no-startup-id i3-msg 'workspace $workspace1; append_layout ~/.config/i3/workspace-1.json'
+exec --no-startup-id brave-browser
+exec --no-startup-id alacritty
+exec --no-startup-id obsidian
+exec --no-startup-id i3-msg 'workspace $workspace2; append_layout ~/.config/i3/workspace-2.json'
+exec --no-startup-id $HOME/binaryninja/binaryninja
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {

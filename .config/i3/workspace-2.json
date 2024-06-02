@@ -1,0 +1,11 @@
+{
+	"layout": "tabbed",
+	"percent": 1,
+	"type": "con",
+	"name": "Binary Ninja",
+	"swallows": [
+		{
+			"class": "Binary Ninja"
+		}
+	]
+}
