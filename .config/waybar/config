@@ -1,0 +1,94 @@
+{
+    "layer": "top",
+    "position": "bottom",
+
+    "height": 32,
+	"spacing": 8,
+
+    "modules-left": ["sway/workspaces", "sway/mode"],
+	"modules-center": ["custom/binja", "custom/blueman", "custom/obsidian"],
+    "modules-right": ["tray", "pulseaudio", "cpu", "memory", "network", "temperature", "clock"],
+
+
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "urgent": "u",
+            "focused": "Current",
+            "default": "d"
+        }
+    },
+
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+
+	"custom/binja": {
+        "format": "BinaryNinja",
+		"on-click": "$HOME/binaryninja/binaryninja",
+	},
+
+	"custom/blueman": {
+        "format": "Bluetooth",
+		"on-click": "blueman-manager",
+	},
+
+	"custom/obsidian": {
+        "format": "obsidian",
+		"on-click": "obsidian --no-sandbox",
+	},
+
+    "network": {
+        "format-wifi": "f",
+        "format-disconnected": "f", 
+        "max-length": 50,
+    },
+
+    "tray": {
+        "icon-size": 15,
+        "spacing": 10
+    },
+
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%d-%m-%Y}"
+    },
+
+    "cpu": {
+        "format": "cpu:{usage}%",
+        "tooltip": false
+    },
+
+    "memory": {
+        "format": "mem:{}%"
+    },
+
+    "temperature": {
+        "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+        "critical-threshold": 82,
+        "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["*"]
+    },
+
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon} ",
+        "format-muted": "0% {icon} ",
+        "format-source": "{volume}%",
+        "format-source-muted": "(",
+        "format-icons": {
+            "headphone": "1",
+            "hands-free": "2",
+            "headset": "3",
+            "default": ["4", "4", "3"]
+        },
+        "on-click": "pavucontrol"
+    }
+}

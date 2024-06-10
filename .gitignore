@@ -18,6 +18,8 @@
 !.config/nvim/**
 !.config/zed/**
 !.config/i3/**
+!.config/sway/**
+!.config/waybar/**
 
 # ignore
 /.vim/plugins
