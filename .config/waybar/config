@@ -6,7 +6,7 @@
 	"spacing": 8,
 
     "modules-left": ["sway/workspaces", "sway/mode"],
-	"modules-center": ["custom/binja", "custom/blueman", "custom/obsidian", "custom/files"],
+	"modules-center": ["custom/binja", "custom/blueman", "custom/obsidian", "custom/files", "custom/grim"],
     "modules-right": ["tray", "pulseaudio", "cpu", "memory", "network", "temperature", "clock"],
 
 
@@ -28,6 +28,11 @@
 	"custom/blueman": {
         "format": "Bluetooth",
 		"on-click": "blueman-manager",
+	},
+
+	"custom/grim": {
+        "format": "ScrShot",
+		"on-click": "grim -g \"$(slurp)\"",
 	},
 
 	"custom/obsidian": {

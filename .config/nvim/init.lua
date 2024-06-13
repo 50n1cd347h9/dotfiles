@@ -18,7 +18,7 @@ vim.keymap.set('t', '<C-w>', '<C-\\><C-n><C-w>')
 
 vim.opt.relativenumber = true
 vim.opt.syntax = 'enable'
-vim.cmd('colorscheme hybrid')
+vim.cmd('colorscheme kanagawa')
 vim.opt.clipboard = "unnamedplus"
 vim.opt.shell = 'bash'
 vim.opt.autoindent = true
