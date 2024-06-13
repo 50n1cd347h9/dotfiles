@@ -6,7 +6,7 @@
 	"spacing": 8,
 
     "modules-left": ["sway/workspaces", "sway/mode"],
-	"modules-center": ["custom/binja", "custom/blueman", "custom/obsidian"],
+	"modules-center": ["custom/binja", "custom/blueman", "custom/obsidian", "custom/files"],
     "modules-right": ["tray", "pulseaudio", "cpu", "memory", "network", "temperature", "clock"],
 
 
@@ -14,15 +14,6 @@
         "disable-scroll": true,
         "all-outputs": true,
         "format": "{icon}",
-        "format-icons": {
-            "1": "1",
-            "2": "2",
-            "3": "3",
-            "4": "4",
-            "urgent": "u",
-            "focused": "Current",
-            "default": "d"
-        }
     },
 
     "sway/mode": {
@@ -42,6 +33,11 @@
 	"custom/obsidian": {
         "format": "obsidian",
 		"on-click": "obsidian --no-sandbox",
+	},
+
+	"custom/files": {
+        "format": "File",
+		"on-click": "dolphin",
 	},
 
     "network": {

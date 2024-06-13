@@ -26,6 +26,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- swaylock --nofork
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
+exec --no-startup-id swaybg -m fill -i $HOME/.config/swaybg/images/IMG_6081.JPG 
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -145,14 +146,11 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
-# reload the configuration file
 bindsym $mod+Shift+c reload
 
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r exec swaymsg reload
 
 
-# exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec swaymsg exit
 
 # resize window (you can also use the mouse for that)
@@ -189,7 +187,11 @@ bar {
 
 bindsym $mod+r mode "resize"
 
-exec --no-startup-id ~/.config/sway/set_windows.sh
+exec --no-startup-id $HOME/.config/sway/set_windows.sh
+# exec --no-startup-id $HOME/.config/sway/mov_alacritty_right.sh > sway.log 2>&1
+exec --no-startup-id blueman-applet
+
+
 
 #kill all window and relocate windows
 bindsym $mod+Shift+Escape exec --no-startup-id ~/.config/sway/kill_all_window.sh
