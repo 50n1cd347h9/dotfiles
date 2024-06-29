@@ -12,7 +12,7 @@ local config = wezterm.config_builder()
 config.window_background_opacity = 0.8
 
 config.font = wezterm.font_with_fallback {
-  'Intel One Mono',
+	'Intel One Mono',
 }
 config.font_rules = {
 	{
@@ -95,6 +95,22 @@ config.keys = {
 		mods = 'LEADER',
 		key = 'p',
 		action = act.ActivateTabRelative(-1),
+	}, 
+	{
+		key = 'h',
+		mods = 'LEADER',
+		action = act.AdjustPaneSize { 'Left', 5 },
+	},
+	{
+		key = 'j',
+		mods = 'LEADER',
+		action = act.AdjustPaneSize { 'Down', 5 },
+	},
+	{ key = 'k', mods = 'LEADER', action = act.AdjustPaneSize { 'Up', 5 } },
+	{
+		key = 'l',
+		mods = 'LEADER',
+		action = act.AdjustPaneSize { 'Right', 5 },
 	},
 }
 
