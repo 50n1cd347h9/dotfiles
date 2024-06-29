@@ -10,8 +10,35 @@ local config = wezterm.config_builder()
 -- config.color_scheme = 'AdventureTime'
 
 config.window_background_opacity = 0.8
+
 config.font = wezterm.font_with_fallback {
   'Intel One Mono',
+}
+config.font_rules = {
+	{
+		italic = true,
+		font = wezterm.font {
+			family = 'Intel One Mono',
+			style = 'Italic',
+		}
+
+	},
+	{
+		intensity = 'Bold',
+		font = wezterm.font {
+			family = 'Intel One Mono',
+			weight = 'Bold',
+		}
+	},
+	{
+		intensity = 'Bold',
+		italic = true,
+		font = wezterm.font {
+			family = 'Intel One Mono',
+			weight = 'Bold',
+			style = 'Italic',
+		}
+	},
 }
 -- Leader is the same as my old tmux prefix
 config.leader = { key = 'b', mods = 'CTRL', timeout_milliseconds = 1000 }
