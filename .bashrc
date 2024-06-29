@@ -17,10 +17,9 @@ export PATH="$HOME/.local/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 export XDG_DATA_DIRS="/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share"
 export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
-
+export GTK_IM_MODULE="fcitx5"
+export QT_IM_MODULE="fcitx5"
+export XMODIFIERS=@im="fcitx5"
 
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -252,14 +251,14 @@ export PATH=/opt/riscv/bin:$PATH
 export PATH=/opt/binaryninja:$PATH
 alias binja="binaryninja &"
 
-if command -v tmux &>/dev/null; then
-	count=`ps aux | grep tmux | grep -v grep | wc -l`
-	if test $count -eq 0; then
-		echo `tmux new-session`
-	elif test $count -eq 1; then
-		echo `tmux a`
-	fi	
-fi
+# if command -v tmux &>/dev/null; then
+# 	count=`ps aux | grep tmux | grep -v grep | wc -l`
+# 	if test $count -eq 0; then
+# 		echo `tmux new-session`
+# 	elif test $count -eq 1; then
+# 		echo `tmux a`
+# 	fi	
+# fi
 
 
 # below line is needed if you use gdb with gef

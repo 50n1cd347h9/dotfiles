@@ -6,7 +6,7 @@
 	"spacing": 8,
 
     "modules-left": ["sway/workspaces", "sway/mode"],
-	"modules-center": ["custom/binja", "custom/blueman", "custom/obsidian", "custom/files", "custom/grim"],
+	"modules-center": ["custom/binja", "custom/blueman", "custom/obsidian", "custom/files", "custom/grim", "custom/gimp"],
     "modules-right": ["tray", "pulseaudio", "cpu", "memory", "network", "temperature", "clock"],
 
 
@@ -43,6 +43,11 @@
 	"custom/files": {
         "format": "File",
 		"on-click": "dolphin",
+	},
+
+	"custom/gimp": {
+        "format": "Gimp",
+		"on-click": "flatpak run org.gimp.GIMP",
 	},
 
     "network": {
