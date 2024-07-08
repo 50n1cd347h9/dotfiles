@@ -9,7 +9,6 @@ export HISTFILESIZE=2000
 export PATH=$HOME/bin:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
 export PATH="$PATH:/opt/nvim-linux64/bin"
-export PATH=$HOME/.pyenv/bin:$PATH
 export PATH="$HOME/zig-linux-x86_64-0.13.0-dev.46+3648d7df1:$PATH"
 export PATH="$HOME/local/llvm17-release/bin:$PATH"
 export PATH="/opt:$PATH"
@@ -270,6 +269,7 @@ if [ -f ~/.git-completion.sh ]; then
     source ~/.git-completion.sh
 fi
 
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
 
+alias imfasm="$HOME/workspace/zig/imFine-Assembler/zig-out/bin/imFine-Assembler"
+alias imfvm="$HOME/workspace/zig/imFineVM/zig-out/bin/imFineVM"
+alias pwninit="pwninit --template-path ~/dotfiles/ctf/pwninit-template.py --template-bin-name vuln"

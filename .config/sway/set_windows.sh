@@ -5,4 +5,4 @@ swaymsg "workspace 2"
 swaymsg 'exec --no-startup-id $HOME/binaryninja/binaryninja'
 
 swaymsg "workspace 3"
-swaymsg 'exec --no-startup-id alacritty'
+swaymsg 'exec --no-startup-id wezterm'

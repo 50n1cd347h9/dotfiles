@@ -21,6 +21,7 @@
 !.config/sway/**
 !.config/waybar/**
 !.config/wezterm/**
+!ctf/**
 
 # ignore
 /.vim/plugins
