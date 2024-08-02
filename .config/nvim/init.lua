@@ -32,7 +32,7 @@ vim.api.nvim_create_augroup('vimrc', { clear = true })
 -- })
 
 require'nvim-treesitter.configs'.setup {
-	ensure_installed = {"c", "python", "typescript", "vim", "yaml", "rust", "lua", "commonlisp", "zig"}, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+	ensure_installed = {"glsl", "c", "python", "typescript", "vim", "yaml", "rust", "lua", "commonlisp", "zig"}, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
 	sync_install = true,
 	highlight = {
 		enable = true,              -- false will disable the whole extension
@@ -40,3 +40,4 @@ require'nvim-treesitter.configs'.setup {
 	},
 }
 
+vim.cmd [[autocmd BufRead,BufNewFile *.frag setfiletype glsl]]
