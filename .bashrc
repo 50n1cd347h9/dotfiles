@@ -6,17 +6,23 @@
 
 export HISTSIZE=2000
 export HISTFILESIZE=2000
+
 export PATH=$HOME/bin:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
 export PATH="$PATH:/opt/nvim-linux64/bin"
-export PATH="$HOME/zig-linux-x86_64-0.13.0-dev.46+3648d7df1:$PATH"
+export PATH="$HOME/zig/build/stage3/bin:$PATH"
 export PATH="$HOME/local/llvm17-release/bin:$PATH"
+export PATH="$HOME/local/llvm18-release/bin:$PATH"
 export PATH="/opt:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/share/glsl/bin:$PATH"
+export PATH="/usr/local/musl/bin:$PATH"
+
+
 export NVM_DIR="$HOME/.nvm"
 export XDG_DATA_DIRS="/usr/share:/usr/local/share:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share"
 export LD_LIBRARY_PATH="/usr/local/lib:/usr/lib64:$LD_LIBRARY_PATH"
+export LD_INCLUDE_PATH="/usr/local/include/GL"
 export GTK_IM_MODULE="fcitx5"
 export QT_IM_MODULE="fcitx5"
 export XMODIFIERS=@im="fcitx5"
@@ -93,7 +99,9 @@ if ${use_color} ; then
 	elif [[ $(ps aux | grep "sshd" | grep -v "root" | grep -v "grep") ]]; then
 	 	PS1="\[$(tput bold)\]\[\033[38;5;2m\]\u\[$(tput sgr0)\] \[$(tput bold)\]\[\033[38;5;11m\]\W\[$(tput sgr0)\] \[$(tput bold)\]\[\033[38;5;13m\]ssh $ \[$(tput sgr0)\]"
 	else
-		PS1="\[$(tput bold)\]\[\033[38;5;2m\]\u\[$(tput sgr0)\] \[$(tput bold)\]\[\033[38;5;11m\]\W\[$(tput sgr0)\] \[$(tput bold)\]\[\033[38;5;13m\]🍣 \[$(tput sgr0)\]"
+		# PS1="\[$(tput bold)\]\[\033[38;5;2m\]\u\[$(tput sgr0)\] \[$(tput bold)\]\[\033[38;5;11m\]\W\[$(tput sgr0)\] \[$(tput bold)\]\[\033[38;5;13m\]🍣 \[$(tput sgr0)\]"
+  		PS1="\\[$(tput bold)\\]\\[\\033[38;5;2m\\]\\]\\u \\W \\[\\033[38;5;13m\\]$ \\[$(tput sgr0)\\]"
+		# PS1="\[$(tput bold)\]\[\033[38;5;2m\]\u\[$(tput sgr0)\] \[$(tput bold)\]\[\033[38;5;11m\]\W\[$(tput sgr0)\] \[$(tput bold)\]\[\033[38;5;13m\]🍣\[$(tput sgr0)\] "
 	fi
 
 	alias ls='ls --color=auto'
@@ -181,14 +189,14 @@ alias th='theme.sh -i2'
 ROOT_TERMINAL_THEME="red-alert"
 SSH_TERMINAL_THEME="mellow-purple"
 
-su() {
-	(
-	INHIBIT_THEME_HIST=1 theme.sh ${ROOT_TERMINAL_THEME}
-	trap 'theme.sh "$(theme.sh -l|tail -n1)"' INT
-	env su "$@"
-	theme.sh "$(theme.sh -l|tail -n1)"
-)
-}
+# su() {
+# 	(
+# 	INHIBIT_THEME_HIST=1 theme.sh ${ROOT_TERMINAL_THEME}
+# 	trap 'theme.sh "$(theme.sh -l|tail -n1)"' INT
+# 	env su "$@"
+# 	theme.sh "$(theme.sh -l|tail -n1)"
+# )
+# }
 
 # Git prompt
 if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then

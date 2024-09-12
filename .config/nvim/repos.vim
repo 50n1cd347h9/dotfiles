@@ -13,3 +13,6 @@ https://github.com/neovim/nvim-lspconfig.git
 
 https://github.com/Shougo/ddx.vim.git
 https://github.com/vim-denops/denops.vim.git
+
+" completion
+" https://github.com/hrsh7th/nvim-cmp.git
