@@ -29,6 +29,7 @@
 /.config/nvim/plugins
 /.config/discord*
 /.config/i3/i3blocks.out
+/.config/unity3d
 
 # do not include submodule directory!!!
 /.config/nvim/fudebako.vim
