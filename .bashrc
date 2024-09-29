@@ -100,8 +100,8 @@ if ${use_color} ; then
 	 	PS1="\[$(tput bold)\]\[\033[38;5;2m\]\u\[$(tput sgr0)\] \[$(tput bold)\]\[\033[38;5;11m\]\W\[$(tput sgr0)\] \[$(tput bold)\]\[\033[38;5;13m\]ssh $ \[$(tput sgr0)\]"
 	else
 		# PS1="\[$(tput bold)\]\[\033[38;5;2m\]\u\[$(tput sgr0)\] \[$(tput bold)\]\[\033[38;5;11m\]\W\[$(tput sgr0)\] \[$(tput bold)\]\[\033[38;5;13m\]🍣 \[$(tput sgr0)\]"
-  		PS1="\\[$(tput bold)\\]\\[\\033[38;5;2m\\]\\]\\u \\W \\[\\033[38;5;13m\\]$ \\[$(tput sgr0)\\]"
 		# PS1="\[$(tput bold)\]\[\033[38;5;2m\]\u\[$(tput sgr0)\] \[$(tput bold)\]\[\033[38;5;11m\]\W\[$(tput sgr0)\] \[$(tput bold)\]\[\033[38;5;13m\]🍣\[$(tput sgr0)\] "
+  		PS1="\[$(tput bold)\]\[\e[38;5;2m\]\u \W \[\e[38;5;13m\]$ \[$(tput sgr0)\]"
 	fi
 
 	alias ls='ls --color=auto'
