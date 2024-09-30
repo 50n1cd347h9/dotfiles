@@ -53,75 +53,75 @@ config.window_padding = {
 
 -- tmux key bindings
 local act = wezterm.action
-config.keys = {
-	-- splitting
-	{
-		mods   = "LEADER|SHIFT",
-		key    = '"',
-		action = act.SplitVertical({ domain = 'CurrentPaneDomain' }),
-	},
-	{
-		mods   = "LEADER|SHIFT",
-		key    = "%",
-		action = act.SplitHorizontal({ domain = 'CurrentPaneDomain' }),
-	},
-	{
-		mods = "LEADER",
-		key = "Space",
-		action = act.RotatePanes "Clockwise"
-	},
-	{
-		mods = 'LEADER',
-		key = 'x',
-		action = act.CloseCurrentPane { confirm = false },
-	},
-	{ 
-		mods = 'LEADER',
-		key = 'c',
-		action = act.SpawnTab 'CurrentPaneDomain',
-	},  
-	{
-		mods = 'LEADER|SHIFT',
-		key = '&',
-		action = act.CloseCurrentTab { confirm = true },
-	}, 
-	{
-		mods = 'LEADER',
-		key = 'm',
-		action = act.TogglePaneZoomState
-	},
-	{
-		mods = 'LEADER',
-		key = 'o',
-		action = act.PaneSelect
-	}, 
-	{
-		mods = 'LEADER',
-		key = 'n',
-		action = act.ActivateTabRelative(1),
-	},
-	{
-		mods = 'LEADER',
-		key = 'p',
-		action = act.ActivateTabRelative(-1),
-	}, 
-	{
-		key = 'h',
-		mods = 'LEADER',
-		action = act.AdjustPaneSize { 'Left', 5 },
-	},
-	{
-		key = 'j',
-		mods = 'LEADER',
-		action = act.AdjustPaneSize { 'Down', 5 },
-	},
-	{ key = 'k', mods = 'LEADER', action = act.AdjustPaneSize { 'Up', 5 } },
-	{
-		key = 'l',
-		mods = 'LEADER',
-		action = act.AdjustPaneSize { 'Right', 5 },
-	},
-}
+-- config.keys = {
+-- 	-- splitting
+-- 	{
+-- 		mods   = "LEADER|SHIFT",
+-- 		key    = '"',
+-- 		action = act.SplitVertical({ domain = 'CurrentPaneDomain' }),
+-- 	},
+-- 	{
+-- 		mods   = "LEADER|SHIFT",
+-- 		key    = "%",
+-- 		action = act.SplitHorizontal({ domain = 'CurrentPaneDomain' }),
+-- 	},
+-- 	{
+-- 		mods = "LEADER",
+-- 		key = "Space",
+-- 		action = act.RotatePanes "Clockwise"
+-- 	},
+-- 	{
+-- 		mods = 'LEADER',
+-- 		key = 'x',
+-- 		action = act.CloseCurrentPane { confirm = false },
+-- 	},
+-- 	{ 
+-- 		mods = 'LEADER',
+-- 		key = 'c',
+-- 		action = act.SpawnTab 'CurrentPaneDomain',
+-- 	},  
+-- 	{
+-- 		mods = 'LEADER|SHIFT',
+-- 		key = '&',
+-- 		action = act.CloseCurrentTab { confirm = true },
+-- 	}, 
+-- 	{
+-- 		mods = 'LEADER',
+-- 		key = 'm',
+-- 		action = act.TogglePaneZoomState
+-- 	},
+-- 	{
+-- 		mods = 'LEADER',
+-- 		key = 'o',
+-- 		action = act.PaneSelect
+-- 	}, 
+-- 	{
+-- 		mods = 'LEADER',
+-- 		key = 'n',
+-- 		action = act.ActivateTabRelative(1),
+-- 	},
+-- 	{
+-- 		mods = 'LEADER',
+-- 		key = 'p',
+-- 		action = act.ActivateTabRelative(-1),
+-- 	}, 
+-- 	{
+-- 		key = 'h',
+-- 		mods = 'LEADER',
+-- 		action = act.AdjustPaneSize { 'Left', 5 },
+-- 	},
+-- 	{
+-- 		key = 'j',
+-- 		mods = 'LEADER',
+-- 		action = act.AdjustPaneSize { 'Down', 5 },
+-- 	},
+-- 	{ key = 'k', mods = 'LEADER', action = act.AdjustPaneSize { 'Up', 5 } },
+-- 	{
+-- 		key = 'l',
+-- 		mods = 'LEADER',
+-- 		action = act.AdjustPaneSize { 'Right', 5 },
+-- 	},
+-- }
 
 -- and finally, return the configuration to wezterm
 return config

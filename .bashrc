@@ -4,6 +4,7 @@
 
 [[ $- != *i* ]] && return
 
+export DEFAULT_TERMINAL="contour"
 export HISTSIZE=2000
 export HISTFILESIZE=2000
 
@@ -99,9 +100,7 @@ if ${use_color} ; then
 	elif [[ $(ps aux | grep "sshd" | grep -v "root" | grep -v "grep") ]]; then
 	 	PS1="\[$(tput bold)\]\[\033[38;5;2m\]\u\[$(tput sgr0)\] \[$(tput bold)\]\[\033[38;5;11m\]\W\[$(tput sgr0)\] \[$(tput bold)\]\[\033[38;5;13m\]ssh $ \[$(tput sgr0)\]"
 	else
-		# PS1="\[$(tput bold)\]\[\033[38;5;2m\]\u\[$(tput sgr0)\] \[$(tput bold)\]\[\033[38;5;11m\]\W\[$(tput sgr0)\] \[$(tput bold)\]\[\033[38;5;13m\]🍣 \[$(tput sgr0)\]"
-		# PS1="\[$(tput bold)\]\[\033[38;5;2m\]\u\[$(tput sgr0)\] \[$(tput bold)\]\[\033[38;5;11m\]\W\[$(tput sgr0)\] \[$(tput bold)\]\[\033[38;5;13m\]🍣\[$(tput sgr0)\] "
-  		PS1="\[$(tput bold)\]\[\e[38;5;2m\]\u \W \[\e[38;5;13m\]$ \[$(tput sgr0)\]"
+  		PS1="\[$(tput bold)\]\[\e[38;5;2m\]\u \w \[\e[38;5;13m\]\n ↳ $ \[$(tput sgr0)\]"
 	fi
 
 	alias ls='ls --color=auto'
@@ -259,14 +258,14 @@ export PATH=/opt/riscv/bin:$PATH
 export PATH=/opt/binaryninja:$PATH
 alias binja="binaryninja &"
 
-# if command -v tmux &>/dev/null; then
-# 	count=`ps aux | grep tmux | grep -v grep | wc -l`
-# 	if test $count -eq 0; then
-# 		echo `tmux new-session`
-# 	elif test $count -eq 1; then
-# 		echo `tmux a`
-# 	fi	
-# fi
+if command -v tmux &>/dev/null; then
+	count=`ps aux | grep tmux | grep -v grep | wc -l`
+	if test $count -eq 0; then
+		echo `tmux new-session`
+	elif test $count -eq 1; then
+		echo `tmux a`
+	fi	
+fi
 
 
 # below line is needed if you use gdb with gef
