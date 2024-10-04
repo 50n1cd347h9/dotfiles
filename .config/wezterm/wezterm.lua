@@ -41,7 +41,8 @@ config.font_rules = {
 	},
 }
 -- Leader is the same as my old tmux prefix
-config.leader = { key = 'b', mods = 'CTRL', timeout_milliseconds = 1000 }
+
+config.hide_tab_bar_if_only_one_tab = true
 
 config.window_padding = {
 	left = 0,
@@ -52,6 +53,7 @@ config.window_padding = {
 
 
 -- tmux key bindings
+-- config.leader = { key = 'b', mods = 'CTRL', timeout_milliseconds = 1000 }
 local act = wezterm.action
 -- config.keys = {
 -- 	-- splitting

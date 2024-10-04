@@ -18,6 +18,7 @@ export PATH="/opt:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/share/glsl/bin:$PATH"
 export PATH="/usr/local/musl/bin:$PATH"
+export PATH="/home/s0n1cd347h9/.deno/bin/:$PATH"
 
 
 export NVM_DIR="$HOME/.nvm"
@@ -281,3 +282,4 @@ fi
 alias imfasm="$HOME/workspace/zig/imFine-Assembler/zig-out/bin/imFine-Assembler"
 alias imfvm="$HOME/workspace/zig/imFineVM/zig-out/bin/imFineVM"
 alias pwninit="pwninit --template-path ~/dotfiles/ctf/pwninit-template.py --template-bin-name vuln"
+. "/home/s0n1cd347h9/.deno/env"
