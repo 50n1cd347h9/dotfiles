@@ -18,8 +18,10 @@ export PATH="/opt:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/share/glsl/bin:$PATH"
 export PATH="/usr/local/musl/bin:$PATH"
-export PATH="/home/s0n1cd347h9/.deno/bin/:$PATH"
-
+export PATH="/home/s0n1cd347h9/.deno/bin:$PATH"
+export PATH="$HOME/scripts:$PATH"
+export PATH="$HOME/.local/share/wabt-1.0.36/bin:$PATH"
+export PATH="$HOME/.local/share/jdk-21.0.5+11/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 export XDG_DATA_DIRS="/usr/share:/usr/local/share:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share"
@@ -27,8 +29,8 @@ export LD_LIBRARY_PATH="/usr/local/lib:/usr/lib64:$LD_LIBRARY_PATH"
 export LD_INCLUDE_PATH="/usr/local/include/GL"
 export GTK_IM_MODULE="fcitx5"
 export QT_IM_MODULE="fcitx5"
-export XMODIFIERS=@im="fcitx5"
-
+export XMODIFIERS="@im=fcitx5"
+export WASMER_DIR="$HOME/.local/share/.wasmer"
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -101,7 +103,13 @@ if ${use_color} ; then
 	elif [[ $(ps aux | grep "sshd" | grep -v "root" | grep -v "grep") ]]; then
 	 	PS1="\[$(tput bold)\]\[\033[38;5;2m\]\u\[$(tput sgr0)\] \[$(tput bold)\]\[\033[38;5;11m\]\W\[$(tput sgr0)\] \[$(tput bold)\]\[\033[38;5;13m\]ssh $ \[$(tput sgr0)\]"
 	else
-  		PS1="\[$(tput bold)\]\[\e[38;5;2m\]\u \w \[\e[38;5;13m\]\n ↳ $ \[$(tput sgr0)\]"
+		parent_id=$PPID
+		parent_name=$(ps -p $parent_id -o comm=)
+		if [[ "$parent_name" == "nvim" ]]; then
+  			PS1="\[$(tput bold)\]\[\e[38;5;2m\]\u \w \[\e[38;5;13m\]\n ↳ $ \[$(tput sgr0)\]"
+		else
+  			PS1="\[$(tput bold)\]\[\e[38;5;2m\]\u \w \[\e[38;5;13m\]\n ↳ $ \[$(tput sgr0)\]"
+		fi
 	fi
 
 	alias ls='ls --color=auto'
@@ -125,6 +133,7 @@ alias free='free -m'                      # show sizes in MB
 alias more=less
 alias mc='. /usr/lib/mc/mc-wrapper.sh'
 alias python="python3"
+alias ls="ls -aF --color=auto"
 
 xhost +local:root > /dev/null 2>&1
 
@@ -283,3 +292,7 @@ alias imfasm="$HOME/workspace/zig/imFine-Assembler/zig-out/bin/imFine-Assembler"
 alias imfvm="$HOME/workspace/zig/imFineVM/zig-out/bin/imFineVM"
 alias pwninit="pwninit --template-path ~/dotfiles/ctf/pwninit-template.py --template-bin-name vuln"
 . "/home/s0n1cd347h9/.deno/env"
+
+# Wasmer
+export WASMER_DIR="/home/s0n1cd347h9/.wasmer"
+[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"

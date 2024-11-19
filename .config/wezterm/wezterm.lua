@@ -11,14 +11,15 @@ local config = wezterm.config_builder()
 
 config.window_background_opacity = 0.8
 
+config.font_size = 12.5
 config.font = wezterm.font_with_fallback {
-	'Intel One Mono',
+	'HackGen35 Console NF',
 }
 config.font_rules = {
 	{
 		italic = true,
 		font = wezterm.font {
-			family = 'Intel One Mono',
+			family = 'HackGen35 Console NF',
 			style = 'Italic',
 		}
 
@@ -26,7 +27,7 @@ config.font_rules = {
 	{
 		intensity = 'Bold',
 		font = wezterm.font {
-			family = 'Intel One Mono',
+			family = 'HackGen35 Console NF',
 			weight = 'Bold',
 		}
 	},
@@ -34,12 +35,41 @@ config.font_rules = {
 		intensity = 'Bold',
 		italic = true,
 		font = wezterm.font {
-			family = 'Intel One Mono',
+			family = 'HackGen35 Console NF',
 			weight = 'Bold',
 			style = 'Italic',
 		}
 	},
 }
+-- config.font = wezterm.font_with_fallback {
+-- 	'Intel One Mono',
+-- }
+-- config.font_rules = {
+-- 	{
+-- 		italic = true,
+-- 		font = wezterm.font {
+-- 			family = 'Intel One Mono',
+-- 			style = 'Italic',
+-- 		}
+-- 
+-- 	},
+-- 	{
+-- 		intensity = 'Bold',
+-- 		font = wezterm.font {
+-- 			family = 'Intel One Mono',
+-- 			weight = 'Bold',
+-- 		}
+-- 	},
+-- 	{
+-- 		intensity = 'Bold',
+-- 		italic = true,
+-- 		font = wezterm.font {
+-- 			family = 'Intel One Mono',
+-- 			weight = 'Bold',
+-- 			style = 'Italic',
+-- 		}
+-- 	},
+-- }
 -- Leader is the same as my old tmux prefix
 
 config.hide_tab_bar_if_only_one_tab = true
