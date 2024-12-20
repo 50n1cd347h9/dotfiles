@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
-let g:netrw_dirhist_3='/Users/sonicdeath9/dotfiles/.vim/fudebako.vim'
-let g:netrw_dirhist_2='/Users/sonicdeath9/works/BlueBerry/src/component'
-let g:netrw_dirhist_1='/home/sonicdeath9/dotfiles/.gitignore'

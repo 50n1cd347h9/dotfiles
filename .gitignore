@@ -12,16 +12,15 @@
 !docker/**
 !.bashrc
 !.gdbinit
-!.vim/**
+!.vim/vimrc
+!.vim/repos.vim
 !.tmux.conf
 !.config/alacritty/**
 !.config/nvim/**
-!.config/zed/**
 !.config/i3/**
 !.config/sway/**
 !.config/waybar/**
 !.config/wezterm/**
-!.config/contour/**
 !ctf/**
 !/scripts/**
 
