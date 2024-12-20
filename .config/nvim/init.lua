@@ -29,7 +29,7 @@ vim.api.nvim_create_augroup('vimrc', { clear = true })
 
 
 require'nvim-treesitter.configs'.setup {
-	ensure_installed = {"go", "verilog", "c_sharp", "glsl", "c", "vue", "python", "typescript", "vim", "yaml", "rust", "lua", "commonlisp", "zig"}, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+	ensure_installed = {"tsx", "awk", "go", "verilog", "c_sharp", "html", "glsl", "c", "vue", "python", "javascript", "typescript", "vim", "yaml", "rust", "lua", "commonlisp", "zig"}, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
 	sync_install = true,
 	highlight = {
 		enable = true,              -- false will disable the whole extension
@@ -39,6 +39,8 @@ require'nvim-treesitter.configs'.setup {
 
 -- when load .frag
 vim.cmd [[autocmd BufRead,BufNewFile *.frag setfiletype glsl]]
+vim.cmd [[autocmd BufRead,BufNewFile *.h setfiletype c]]
+vim.cmd [[autocmd BufRead,BufNewFile *.astro setfiletype tsx]]
 
 -- setting terminal true color
 local function set_terminal_colors()
@@ -60,7 +62,7 @@ local function set_terminal_colors()
 	vim.g.terminal_color_15 = "#EEEEEC"
 end
 
-term_height = 10
+term_height = 25
 local function open_termnal()
 	vim.cmd("botright split | resize " .. term_height .. "| terminal")
     vim.cmd("setlocal nonu nornu")  -- disable row number

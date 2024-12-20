@@ -25,12 +25,14 @@ export PATH="$HOME/.local/share/jdk-21.0.5+11/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 export XDG_DATA_DIRS="/usr/share:/usr/local/share:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share"
-export LD_LIBRARY_PATH="/usr/local/lib:/usr/lib64:$LD_LIBRARY_PATH"
-export LD_INCLUDE_PATH="/usr/local/include/GL"
 export GTK_IM_MODULE="fcitx5"
 export QT_IM_MODULE="fcitx5"
 export XMODIFIERS="@im=fcitx5"
 export WASMER_DIR="$HOME/.local/share/.wasmer"
+
+export LD_LIBRARY_PATH="/usr/local/lib:/usr/lib64:$LD_LIBRARY_PATH"
+export LD_INCLUDE_PATH="/usr/local/include/GL"
+
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

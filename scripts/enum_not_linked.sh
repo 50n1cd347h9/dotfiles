@@ -2,12 +2,19 @@
 
 DIRECTORY="$(pwd)"
 
-# find ${directory} -type l -exec readlink {} +
-
-# find ${directory} -type l -exec readlink {} + | \
-# 	awk '{ gsub("/", " "); print}'
-
 LINKED=$(find ${DIRECTORY} -type l | \
-	awk '{ gsub("/", " "); print $NF }')
+        awk '{ gsub("/", " "); gsub(".pdf|.epub", ""); print $NF }' | \
+        uniq
+)
 
-ls ${DIRECTORY}/all | grep -v "$LINKED"
+# include extension
+ALL=$(find ${DIRECTORY}/book_* | \
+        awk '{ gsub("/", " "); print $NF }' | \
+        uniq
+)
+
+if [ -z $LINKED ]; then
+        echo "$ALL"
+else
+        echo "$ALL" | grep -v "$LINKED"
+fi

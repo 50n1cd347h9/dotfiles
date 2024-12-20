@@ -11,7 +11,7 @@ local config = wezterm.config_builder()
 
 config.window_background_opacity = 0.8
 
-config.font_size = 12.5
+config.font_size = 12
 config.font = wezterm.font_with_fallback {
 	'HackGen35 Console NF',
 }
