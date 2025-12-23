@@ -41,36 +41,6 @@ config.font_rules = {
 		}
 	},
 }
--- config.font = wezterm.font_with_fallback {
--- 	'Intel One Mono',
--- }
--- config.font_rules = {
--- 	{
--- 		italic = true,
--- 		font = wezterm.font {
--- 			family = 'Intel One Mono',
--- 			style = 'Italic',
--- 		}
--- 
--- 	},
--- 	{
--- 		intensity = 'Bold',
--- 		font = wezterm.font {
--- 			family = 'Intel One Mono',
--- 			weight = 'Bold',
--- 		}
--- 	},
--- 	{
--- 		intensity = 'Bold',
--- 		italic = true,
--- 		font = wezterm.font {
--- 			family = 'Intel One Mono',
--- 			weight = 'Bold',
--- 			style = 'Italic',
--- 		}
--- 	},
--- }
--- Leader is the same as my old tmux prefix
 
 config.hide_tab_bar_if_only_one_tab = true
 
