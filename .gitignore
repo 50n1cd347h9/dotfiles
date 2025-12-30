@@ -33,4 +33,5 @@
 
 # do not include submodule directory!!!
 /.config/nvim/fudebako.vim
+/.config/nvim/pack
 /env_setup

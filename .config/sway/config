@@ -23,7 +23,7 @@ font pango:monospace 8
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
+#exec --no-startup-id nm-applet
 exec --no-startup-id swaybg -m fill -i $HOME/.config/swaybg/IMG_0976.jpg
 
 # Use pactl to adjust volume in PulseAudio.
@@ -179,9 +179,9 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-# bar {
-# 	swaybar_command waybar
-# }
+#bar {
+#	swaybar_command waybar
+#}
 
 
 
@@ -196,3 +196,10 @@ bindsym $mod+r mode "resize"
 
 #kill all window and relocate windows
 bindsym $mod+Shift+Escape exec --no-startup-id ~/.config/sway/kill_all_window.sh
+
+#input "1390:4185:MOSART_Semi._ELECOM_TK-TDM017BK" {
+#    xkb_layout us
+#    xkb_options numlock:on
+#    xkb_symbols "pc+kp7_override(kp7_home_to_kp7)"
+#}
+
