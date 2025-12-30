@@ -17,6 +17,8 @@ RUN apt install -y \
 	liblzma-dev \
 	libssl-dev \
 	elfutils \
+	yq \
+	git \
 	ncat \
 	less \
 	ruby \
@@ -39,6 +41,16 @@ RUN mkdir -p ~/.local/bin
 RUN ln -s ~/nvim-linux-x86_64/bin/nvim ~/.local/bin/
 RUN mkdir -p ~/.config/nvim
 COPY ./nvim/init.lua /root/.config/nvim/
+
+# neovim plugin
+WORKDIR /root/.config/nvim
+RUN curl -L https://github.com/50n1cd347h9/fudebako.vim/archive/refs/heads/master.zip -o fudebako.zip
+RUN mkdir fudebako.vim
+RUN unzip -j -d fudebako.vim/ fudebako.zip
+WORKDIR /root/.config/nvim/fudebako.vim
+RUN ./install.sh
+WORKDIR /root/.config/nvim
+COPY ./nvim/plugins.yaml ./
 
 # Rust
 WORKDIR /root
