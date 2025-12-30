@@ -16,7 +16,15 @@ RUN apt install -y \
 	pkg-config \
 	liblzma-dev \
 	libssl-dev \
-	elfutils
+	elfutils \
+	ncat \
+	less \
+	ruby \
+	ruby-dev \
+	cpio \
+	musl-tools musl-dev musl \
+	qemu-system-x86
+	
 
 # pwntools
 WORKDIR /root
@@ -40,8 +48,12 @@ RUN ./rust_setup.sh -y
 
 # pwninit
 RUN bash -c 'source "$HOME/.cargo/env" && cargo install pwninit' 
+# ropr
+RUN bash -c 'source "$HOME/.cargo/env" && cargo install ropr' 
 
 #  gef
 RUN wget -q https://raw.githubusercontent.com/bata24/gef/dev/install-uv.sh -O- | sh
+
+RUN gem install seccomp-tools
 
 CMD ["tmux"]
