@@ -1,0 +1,3 @@
+[submodule ".config/nvim/fudebako.nvim"]
+	path = .config/nvim/fudebako.nvim
+	url = https://github.com/50n1cd347h9/fudebako.nvim

@@ -26,7 +26,7 @@
 
 # ignore
 /.vim/plugins
-/.config/nvim/fudebako.nvim/
+#/.config/nvim/fudebako.nvim/
 /.config/discord*
 /.config/i3/i3blocks.out
 /.config/unity3d
