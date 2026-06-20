@@ -1,0 +1,20 @@
+{
+  "plugins": {
+    "marks.nvim": {
+      "rev": "f353e8c08c50f39e99a9ed474172df7eddd89b72",
+      "src": "https://github.com/chentoast/marks.nvim.git"
+    },
+    "nvim-lspconfig": {
+      "rev": "bfcc0171a43f22afa61d927ffe9fcb6cb85dc99e",
+      "src": "https://github.com/neovim/nvim-lspconfig"
+    },
+    "tokyonight.nvim": {
+      "rev": "cdc07ac78467a233fd62c493de29a17e0cf2b2b6",
+      "src": "https://github.com/folke/tokyonight.nvim.git"
+    },
+    "vim-surround": {
+      "rev": "3d188ed2113431cf8dac77be61b842acb64433d9",
+      "src": "https://github.com/tpope/vim-surround"
+    }
+  }
+}

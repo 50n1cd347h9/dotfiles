@@ -1,4 +1,4 @@
-vim.opt.rtp:prepend("/path/to/fudebako.nvim")
+vim.opt.rtp:prepend("/root/.config/nvim/fudebako.nvim")
 require("fudebako").setup({
   plugins = {                          -- loaded immediately
     "tpope/vim-surround",              -- shorthand: owner/repo

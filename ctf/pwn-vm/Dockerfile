@@ -72,6 +72,7 @@ WORKDIR /root
 COPY --link --from=nvim /root/config .config/nvim
 ENV PATH=/root/.config/nvim/nvim-linux-x86_64/bin:$PATH
 RUN git clone https://github.com/50n1cd347h9/fudebako.nvim /root/.config/nvim/fudebako.nvim
+RUN nvim --headless +qa! # install plugins
 
 RUN uv pip install pwntools
 
