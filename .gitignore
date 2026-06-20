@@ -26,10 +26,11 @@
 
 # ignore
 /.vim/plugins
-/.config/nvim/plugins
+/.config/nvim/fudebako.nvim/
 /.config/discord*
 /.config/i3/i3blocks.out
 /.config/unity3d
+/ctf/pwn-vm/nvim/pack
 
 # do not include submodule directory!!!
 /.config/nvim/fudebako.vim
